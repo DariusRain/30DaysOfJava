@@ -7,7 +7,9 @@ public class Bank {
     }
     public void withdraw(int amount, Client client, int accountNumber) {
         boolean auth = client.isClient(accountNumber);
-        if (amount <= client.balance && client.validAccount && auth){
+        int balance = client.getBalance();
+        boolean valid = client.isValid();
+        if (amount <= balance && valid && auth){
             client.decrease(amount);
         }
     }
@@ -16,6 +18,8 @@ public class Bank {
             client.increase(amount);
         }
     }
-
+    public Client newClient(String name) {
+        return new Client(name);
+    }
 
 }
