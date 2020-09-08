@@ -1,10 +1,9 @@
 import java.util.Random;
-public class Client<accountNumber> {
+public class Client {
     Random rand = new Random();
     private int balance;
     private boolean validAccount;
-    int accountNumber;
-    private String routingNumber;
+    private int accountNumber;
     private String name;
     public Client(String name) {
         this.name = name;
@@ -21,7 +20,12 @@ public class Client<accountNumber> {
     public void invalidateAccount() {
         validAccount = false;
     }
-
+    public int getBalance() {
+        return balance;
+    }
+    public boolean isValid() {
+        return validAccount;
+    }
     public void decrease(int amount) {
         balance -= amount;
     }
