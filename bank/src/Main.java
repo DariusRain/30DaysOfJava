@@ -12,7 +12,7 @@ public class Main {
         bank.showClients();
 
         // Withdraw money
-        bank.withdraw(1500, bank.getClient("1209-3029-3421-2532"), "1209-3029-3421-2531");
+        bank.withdraw(1500, bank.getClient("1209-3029-3421-2532"), "1209-3029-3421-2532");
 
         // See withdrawn result
         bank.showClients();
