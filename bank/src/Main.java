@@ -6,13 +6,13 @@ public class Main {
         bank.showClients();
 
         // Deposit money
-        bank.deposit(3000, bank.getClient("1209-3029-3421-2532"));
+        bank.deposit(3000, bank.getClient("1209-3029-3421-2532"), "Checking-Account");
 
         // See deposited money
         bank.showClients();
 
         // Withdraw money
-        bank.withdraw(1500, bank.getClient("1209-3029-3421-2532"), "1209-3029-3421-2532");
+        bank.withdraw(1500, bank.getClient("1209-3029-3421-2532"), "1209-3029-3421-2532", "Checking-Account");
 
         // See withdrawn result
         bank.showClients();
